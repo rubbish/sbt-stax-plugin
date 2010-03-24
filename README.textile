@@ -8,17 +8,17 @@ Define the plugin information in your Plugins.scala
 
 <pre><code>
   class Plugins(info: ProjectInfo) extends PluginDefinition(info) {
-    val stax = "eu.getintheloop" % "sbt-stax-plugin" % "1.0"
+    val stax = "eu.getintheloop" % "sbt-stax-plugin" % "0.1.1"
     // repos
     val staxReleases = "stax-release-repo" at "http://mvn.stax.net/content/repositories/public"
   }
 </code></pre>
- 
+
 Add the stax plugin to your SBT project
 
 <pre><code>
-  class LiftTravelProject(info: ProjectInfo) 
-      extends DefaultWebProject(info) 
+  class LiftTravelProject(info: ProjectInfo)
+      extends DefaultWebProject(info)
       with stax.StaxPlugin {
         ....
         // stax
